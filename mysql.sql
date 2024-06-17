@@ -27,3 +27,8 @@ select region, product_id, sum(sale_price) as sales
 from df_orders
 group by region, product_id
 order by region ,sales Desc;
+
+
+
+select product_id, sum(sale_price) as sales
+from df_order
