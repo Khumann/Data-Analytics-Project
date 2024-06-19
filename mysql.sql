@@ -30,5 +30,10 @@ order by region ,sales Desc;
 
 
 
-select product_id, sum(sale_price) as sales
-from df_order
+/* highest selling products in each region with rank*/
+
+with cte as (select region, sum(sale_price) as sales
+from df_orders
+group by region, product_id)
+select *, rank() over (partition by region order by sales desc) as rn  
+from cte 
