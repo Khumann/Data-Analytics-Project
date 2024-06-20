@@ -2,4 +2,6 @@
 
 
 2) Food Delivery Cost and Profitability Analysis :
+
+
 Food Delivery Cost and Profitability Analysis is a comprehensive evaluation aimed at understanding and optimizing the financial dynamics of a food delivery operation. The goal is to identify areas where the service can reduce costs, increase revenue, and implement pricing or commission strategies that enhance profitability. This guide will walk you through the steps of performing a cost and profitability analysis using Python, including data collection and preparation, data cleaning and transformation, analyzing order values, discount analysis, revenue and profit calculation, cost analysis, and overall profitability analysis. By the end of this guide, you'll have a detailed understanding of how to leverage data to make informed financial decisions for a food delivery business.
