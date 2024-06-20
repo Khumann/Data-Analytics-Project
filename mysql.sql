@@ -37,3 +37,15 @@ from df_orders
 group by region, product_id)
 select *, rank() over (partition by region order by sales desc) as rn  
 from cte 
+where rn <= 5
+
+/* find  growth comparison for 2022 and 2023 sales*/
+ with cte as (select year(order_date) as order_year ,  sum(sale_price) as sales 
+from df_orders
+group by year(order_date), month(order_date)
+order by year(order_date), month(order_date) ) 
+select order_year
+, case when order_year=2022 then sales else 0 end
+, case when order_year=2023 then sales else 0 end
+from cte 
+
