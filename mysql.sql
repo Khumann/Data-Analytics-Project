@@ -49,3 +49,8 @@ select order_year
 , case when order_year=2023 then sales else 0 end
 from cte 
 
+/* for wach category which had highest salary*/
+select category .  format (order_date, 'yyyyMM') AS order_year_match, sum(sale_price) as sales
+from df_orders
+group by category, format(order_date, 'yyyyMM')
+order by category, format(order_date, 'yyyyMM')
